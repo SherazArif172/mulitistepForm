@@ -24,7 +24,7 @@ export default function Home() {
           {step === 2 && <StepB />}
 
           {/* Step 3: Email, Password, and Confirm Password */}
-          {step === 3 && <StepC />}
+          {step === 3 && <StepC setStep={setStep} />}
         </div>
         <Paginationn step={step} setStep={setStep} />
       </div>

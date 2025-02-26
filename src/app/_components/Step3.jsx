@@ -2,7 +2,8 @@ import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { updateFormData, resetForm } from "@/redux/slice/formSlice";
 
-const StepC = () => {
+const StepC = (props) => {
+  const { setStep } = props;
   const dispatch = useDispatch();
   const formData = useSelector((state) => state.form);
 
@@ -14,7 +15,7 @@ const StepC = () => {
   const handleSubmit = () => {
     console.log("Final Form Data:", formData);
     dispatch(resetForm());
-    // setStep(1);
+    setStep(1);
   };
 
   return (
